@@ -9,6 +9,7 @@ const HtmlPlugin = _require('html-webpack-plugin');
 const CopyPlugin = _require('copy-webpack-plugin');
 const { VueLoaderPlugin } = _require('vue-loader');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   resolve: {
@@ -81,6 +82,7 @@ module.exports = {
       ]
     }),
     new VueLoaderPlugin(),
+    new Dotenv(),
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: true,
       __VUE_PROD_DEVTOOLS__: false,
@@ -91,7 +93,7 @@ module.exports = {
   // 개발 서버 옵션
   devServer: {
     host: 'localhost',
-    port: 8080,
+    port: 8079,
     hot: true
   }
 }
