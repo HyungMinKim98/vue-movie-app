@@ -7,3 +7,4 @@ dist/
 .env
 # Local Netlify folder
 .netlify
+cypress/videos/
